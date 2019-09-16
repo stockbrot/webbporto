@@ -1,0 +1,46 @@
+{
+  "contactMe": "Kontaktiere Mich",
+  "preview": "Vorschau",
+  "more": "Weiter Lesen",
+  "visit": "Website besuchen",
+  "close": "Schließen",
+  "footer": "Verbinde dich mit uns auf unseren Sozialen Netzwerken!",
+  "contactText": "Schreibe mir eine kurze E-Mail oder finde mich auf den gängigen Social Media Seiten.",
+  "websiteText": "Diese Platzhalter wurden von <a href=\"https://colorlib.com/\">Colorlib©</a> bereitgestellt.",
+  "404": "This page does not exist, go back to home <v-btn color=\"info\" class=\"d-flex\" width=\"150\" :to=\"$i18nRoute({name: 'home'})\">{{ $t('contactMe') }}</v-btn>",
+  "pages": {
+    "home": "Home",
+    "contact": "Kontakt"
+  },
+  "portfolio": {
+    "sites": "Webseiten",
+    "games": "Spiele",
+    "design": "Design"
+  },
+  "skills": {
+    "title": "Meine Projekte",
+    "btn": "Projekte"
+  },
+  "games": {
+    "packageman": {
+      "dialogText1": "Du hast limitierte Zeit deinen Van mit Paketen zu füllen, und deine Schicht endet sobald dein Van das Ende der Straße erreicht hat. Du arbeitest 5 Tage in der Woche, von Montag - Freitag. Jeder Tag ist auf einer anderen zufälligen map, zu unterschiedlichen Tageszeiten. Beweise deine Fähigkeiten in dem du so viele Türen, Fenster und Garagen wie möglich zerstörst.",
+      "cardText": "Pakete nehmen. Pakete werfen. Geld kriegen. Fertig."
+    },
+    "sunday": {
+      "dialogText1": "In dieser Geschichte entdenkst du einen unbekannten Ort, mit unbekannten Einwohnern. Die Sonne will dich umbringen, die Schatten sind dein einziger zufluchtsort. Die Einwohner dieser Welt verstecken sich ebenfalls in den Schatten, aber sie sind wesentlich kleiner als du.",
+      "cardText": "Ziemlich blendend. Tötliche Umwelt. Kleine Freunde."
+    },
+    "trapped": {
+      "dialogText1": "Die geistige Gesundheit wird oft überbewertet. Wer braucht das, habe ich recht? Wenn Sie dieses Spiel spielen, erleben Sie auf unangenehme Weise völlige Isolation. Wenn Sie es schaffen, in Ihrem Zimmer zu bleiben, können Sie einige Geheimnisse aufdecken",
+      "cardText": "Wahnsinn in der Membran, Wahnsinn im Gehirn."
+    }
+  },
+  "paragraph": {
+    "titel": "Über Mich",
+    "textBlock": "Ich bin ein Web Designer, Spieleentwickler und Künstler, mit Erfahrungen im Management von kleinen und großen Projekten. Mein Hintergrund in UI, UX und Design unterstützen mein durchdachten aber kompetetiven anlauf."
+  },
+  "paragraph2": {
+    "titel": "Dienstleistungen",
+    "textBlock": "Ich bin ein Web Designer, Spieleentwickler und Künstler, mit Erfahrungen im Management von kleinen und großen Projekten. Mein Hintergrund in UI, UX und Design unterstützen mein durchdachten aber kompetetiven anlauf."
+  }
+}
