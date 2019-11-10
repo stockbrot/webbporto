@@ -1,10 +1,9 @@
+import { Trans } from '@/plugins/Translation'
 
 function load (component) {
   // '@' is aliased to src/components
   return () => import(/* webpackChunkName: "[request]" */ `@/pages/${component}.vue`)
 }
-
-import { Trans } from '@/plugins/Translation'
 
 export default [
   {

@@ -1,19 +1,23 @@
 <template>
   <v-layout
     column
+    wrap
+    class="sitePage"
     align-center
   >
-    <v-layout justify-center>
-      <v-flex>
-        <v-img src="http://www.diy.co.za/images/underconstruction.png" height="100vh" width="100vw"></v-img>
-      </v-flex>
-    </v-layout>
+    <v-flex d-flex>
+          <ImageGridComp/>
+    </v-flex>
   </v-layout>
 </template>
 
 <script>
+import ImageGridComp from '@/components/ImageGridComp'
 export default {
-  name: 'Design',
+  name: 'Sites',
+  components: {
+    ImageGridComp
+  },
   data () {
     return {
       // data here and stuffs
@@ -23,8 +27,8 @@ export default {
 </script>
 
 <style lang="stylus">
-.designPage
+.sitePage
   padding-top 100px
-.designSite
-  width 100vw
+  padding-left 50px
+  padding-right 50px
 </style>
