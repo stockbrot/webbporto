@@ -31,7 +31,7 @@ export default {
 
 <style lang="stylus">
 .sitePage
-  padding-top 100px
+  padding-top 180px
   padding-left 50px
   padding-right 50px
 </style>

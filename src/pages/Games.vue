@@ -2,7 +2,7 @@
   <v-layout
     column
     wrap
-    class="my-5"
+    class="sitePage"
     align-center
   >
     <v-flex d-flex>
@@ -26,5 +26,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
+.sitePage
+  padding-top 180px
+  padding-left 50px
+  padding-right 50px
 </style>

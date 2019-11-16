@@ -2,13 +2,15 @@
   <v-layout row fixed id="dropdown-example">
     <v-toolbar fixed dense @scroll="handleScroll">
       <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = true"></v-toolbar-side-icon>
-      <v-toolbar-title class="display-1 ma-2 white--text">{{ siteTitle }}</v-toolbar-title>
+      <v-toolbar-title>
+        <v-btn class="display-1 ma-2 white--text title" :to="$i18nRoute({ path: '/' })">{{siteTitle}}</v-btn>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
+        <DropdownButton attacher=".v-toolbar"/>
         <template v-for="item in nav">
           <v-btn flat :key="item.id" class="title" :to="$i18nRoute({ path: item.title })" @click="drawer = false">{{ $t('pages.' + item.title) }}</v-btn>
         </template>
-        <DropdownButton attacher=".v-toolbar"/>
         <FabComp class="align-center justify-center d-flex"/>
       </v-toolbar-items>
 
@@ -17,6 +19,8 @@
         class="overflow-vis"
         clipped
         absolute
+        :disable-resize-watcher="true"
+        hidden-md-and-up
       >
         <v-list class="pa-1 toolbar-small">
           <v-list-tile avatar>
@@ -29,6 +33,7 @@
         <v-list class="pt-0 nav-drawer" dense>
           <v-divider></v-divider>
 
+          <DropdownButton class="py-1"/>
           <v-list-tile
             v-for="item in nav"
             :key="item.id"
@@ -39,7 +44,6 @@
               <v-list-tile-title><p class="text-uppercase port-switch">{{ $t('pages.' + item.title) }}</p></v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <DropdownButton class="py-1"/>
         </v-list>
       </v-navigation-drawer>
     </v-toolbar>
@@ -77,17 +81,12 @@ export default {
     return {
       drawer: false,
       nav: {
-        home: {
-          id: 0,
-          title: 'home',
-          active: false
-        },
         contact: {
-          id: 1,
+          id: 0,
           title: 'contact',
           active: false
         }
-      },
+      }
     }
   }
 }

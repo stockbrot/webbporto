@@ -1,6 +1,6 @@
 <template>
-  <v-layout row wrap class="siteCardLayout pt-4">
-    <v-flex v-for="n in 3" xs12 sm6 md4 pa-2 :key="n">
+  <v-layout row wrap class="siteCardLayout">
+    <v-flex v-for="n in 3" xs12 sm6 md4 pb-2 px-2 :key="n">
       <v-layout column>
         <v-flex xs12>
           <template v-for="col in columns[n - 1]">

@@ -1,6 +1,6 @@
 <template>
-  <v-layout row wrap class="siteCardLayout pt-4">
-    <v-flex xs4 v-for="col in columns" :key="col.id">
+  <v-layout row wrap>
+    <v-flex xs4 v-for="col in columns" :key="col.id" px-2>
         <v-card
           class="mb-3"
           :style="{backgroundColor: randomColor(columns.id)}"
@@ -17,17 +17,16 @@
           <v-layout text-xs-center align-center justify-center row wrap>
             <v-flex class="xs12 sm6 md8">
               <div class="py-3">
-                <span class="display-1 black--text">test</span><br>
-                <span class="black--text">test</span>
+                <span class="display-1 white--text">{{ col.title }}</span><br>
+                <span class="white--text">test</span>
               </div>
-              <span class="black--text mx-3">test</span><br>
-              <v-layout justify-center align-center>
-                <v-card-actions>
+              <!-- <v-layout justify-center align-center>
+                <v-card-actions> -->
                   <!-- <v-btn @click.stop="card.dialog = true">
                     {{ $t('more') }}
                   </v-btn> -->
-                </v-card-actions>
-              </v-layout>
+                <!-- </v-card-actions>
+              </v-layout> -->
             </v-flex>
           </v-layout>
         </v-card>
@@ -122,8 +121,6 @@ export default {
 }
 </script>
 <style lang="stylus">
-.siteCardLayout
-  width 100vw
 .siteImages>.v-image__image
   background-position top !important
 </style>

@@ -7,30 +7,25 @@
         :key="card.id"
         class="xs12 sm6 md4"
       >
-        <!-- v-bind:class="{ [`sm${card.flex}`]: true }" -->
         <v-hover>
           <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 20 : 2}`">
-            <v-img
-              height="250px"
-            >
               <v-container
                 fill-height
                 fluid
-                pa-2
               >
                 <v-layout text-xs-center fill-height row>
-                  <v-flex flexbox>
+                  <v-flex flexbox py-5>
                     <v-icon size="100" :class="`icon--${hover ? card.text : 1}`">{{ card.icon }}</v-icon>
                     <div class="py-3">
                       <span class="display-1">{{ card.title }}</span><br>
-                      <span class="caption">{{ card.subtitle }}</span>
+                      <!-- <span class="caption">{{ card.subtitle }}</span> -->
                     </div>
                   </v-flex>
                 </v-layout>
               </v-container>
-            </v-img>
+            <!-- </v-img> -->
 
-            <v-card-actions>
+            <!-- <v-card-actions>
               <v-layout align-center justify-center>
                 <v-flex flexbox text-xs-center>
                   <v-spacer></v-spacer>
@@ -39,7 +34,7 @@
                   </v-btn>
                 </v-flex>
               </v-layout>
-            </v-card-actions>
+            </v-card-actions> -->
           </v-card>
         </v-hover>
       </v-flex>
@@ -54,10 +49,10 @@
       return {
         cards: [
           { title: 'Design',
-            subtitle: 'Photoshop - Illustrator - Gimp - Inkscape - Davinci Resolve - Audactiy',
+            subtitle: 'Blender - Photoshop',
             text: 'photo',
             link: 'design',
-            icon: 'fab fa-adobe',
+            icon: 'fas fa-cube',
             flex: 4,
             id: 0
           },
@@ -70,10 +65,10 @@
             id: 1
           },
           { title: 'Gamedesign',
-            subtitle: 'Unreal Engine - C++ - Godot - Python - Haxe - p5.js',
+            subtitle: 'Unreal Engine',
             text: 'unreal',
             link: 'games',
-            icon: 'fas fa-code',
+            icon: 'fas fa-code-branch',
             flex: 4,
             id: 2
           }
