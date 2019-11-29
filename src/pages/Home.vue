@@ -5,7 +5,8 @@
   >
     <v-layout justify-center>
       <v-flex>
-        <ParallaxComp :para="false" img="/img/parallax.3a69e510.png"/>
+        <CarouselComp :items="items"/>
+        <!-- <ParallaxComp :para="false" img="/img/parallax.3a69e510.png"/> -->
         <v-container fluid grid-list-md>
           <ParagraphComp
             :titel="$t('paragraph.titel')"
@@ -13,7 +14,6 @@
             :img="require('../assets/images/moi.png')"
             :imgl="require('../assets/images/moi-lazy.png')"
             :isLeft="true"
-            class="my-4"
           />
         </v-container>
           <ParallaxComp :para="true" img="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1920"/>
@@ -29,12 +29,14 @@
 import CardGridComp from '../components/CardGridComp'
 import ParagraphComp from '../components/ParagraphComp'
 import ParallaxComp from '../components/ParallaxComp'
+import CarouselComp from '../components/CarouselComp'
 
 export default {
   components: {
     CardGridComp,
     ParagraphComp,
-    ParallaxComp
+    ParallaxComp,
+    CarouselComp
   },
   name: 'Home',
   data () {
@@ -54,6 +56,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-</style>

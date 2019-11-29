@@ -1,5 +1,10 @@
 <template>
-  <v-carousel class="carousel elevation-10">
+  <v-carousel
+    class="carousel elevation-10"
+    height="100vh"
+    interval="8000"
+    show-arrows-on-hover="true"
+  >
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -20,7 +25,7 @@
           class="ma-5"
           :to="$i18nRoute({ name: item.link })"
           >
-            <h1>{{ $t('carousel.' + item.link) }}</h1>
+            <h1>{{ item.header }}</h1>
           </v-btn>
         </div>
       </v-layout>
@@ -42,13 +47,11 @@ export default {
 </script>
 
 <style lang="stylus">
-.carouselcomp
-  width 100%
 .custom-caption
   text-align center
   padding 12px
   color white
   text-shadow 2px 2px rgba(0,0,0,0.4)
-.carousel
-  border-radius 5px
+.v-carousel
+  margin-top -50px
 </style>

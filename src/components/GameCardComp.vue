@@ -1,11 +1,11 @@
 <template>
-  <v-container fluid grid-list-md>
-    <v-layout row wrap class="pt-4">
+  <!-- <v-container fluid class="siteCardLayout"> -->
+    <v-layout row wrap>
       <v-flex
         v-for="card in cards"
         :key="card.id"
-        class="xs12 px-3"
-        ma-2
+        class="xs12 gameCard"
+        mb-4
       >
         <v-hover>
           <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 20 : 2}`">
@@ -44,7 +44,7 @@
       </v-flex>
       <DialogComp :dialogItems="cards" :fullscreen="false"/>
     </v-layout>
-  </v-container>
+  <!-- </v-container> -->
 </template>
 
 <script>
@@ -113,4 +113,6 @@ export default {
 .all-cards
   border-radius 10px
   border-width 5px
+.gameCard
+  width 100vw
 </style>
