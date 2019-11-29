@@ -2,11 +2,11 @@
   <v-layout
     column
     wrap
-    class="sitePage"
+    class="sitePage my-5"
     align-center
   >
     <v-flex d-flex>
-          <ImageGridComp/>
+      <ImageGridComp/>
     </v-flex>
   </v-layout>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap class="siteCardLayout pt-4">
+  <v-layout row wrap class="siteCardLayout">
     <v-flex v-for="n in 3" xs12 sm6 md4 pa-2 :key="n">
       <v-layout column>
         <v-flex xs12>
@@ -7,12 +7,18 @@
             <v-card
               class="mb-3 siteCards elevation-5"
               :key="col.id"
+              :style="{backgroundColor: randomColor()}"
             >
-              <v-img
-                :src="col.img"
-                :height="randomHeight(100,350)"
-                class="siteImages elevation-20"
-              ></v-img>
+              <v-hover>
+                <v-img
+                  slot-scope="{ hover }"
+                  :src="col.img"
+                  :height="randomHeight(100, 350, col.id)"
+                  :style="`opacity: ${hover ? 0.4 : 1}`"
+                  class="siteImages elevation-20"
+                  @click="openLink(col.link)"
+                ></v-img>
+              </v-hover>
               <v-container
                 fill-height
                 fluid
@@ -23,17 +29,7 @@
                     <div class="title pa-2">
                       {{ col.title }}
                     </div>
-                    <v-spacer></v-spacer>
-                    <div>
-                      <v-btn
-                        pa-2
-                        color="info"
-                        :href="col.link"
-                        target="blank"
-                      >
-                        {{ $t('preview') }}
-                      </v-btn>
-                    </div>
+                    <!-- <v-spacer></v-spacer> -->
                   </v-flex>
                 </v-layout>
               </v-container>
@@ -81,25 +77,25 @@ export default {
         ],
         [
           {
-            id: 0,
+            id: 4,
             img: require('../assets/images/sites/daren-free-template.png'),
             title: 'Blog',
             link: 'https://colorlib.com/preview/theme/daren/'
           },
           {
-            id: 1,
+            id: 5,
             img: require('../assets/images/sites/bee-free-template.png'),
             title: 'Business',
             link: 'https://colorlib.com/preview/theme/bee/'
           },
           {
-            id: 2,
+            id: 6,
             img: require('../assets/images/sites/minishop-free-template.png'),
             title: 'e-Shop',
             link: 'https://colorlib.com/preview/theme/minishop/'
           },
           {
-            id: 3,
+            id: 7,
             img: require('../assets/images/sites/andrea-free-template.png'),
             title: 'Blog',
             link: 'https://colorlib.com/preview/theme/andrea/'
@@ -107,31 +103,39 @@ export default {
         ],
         [
           {
-            id: 0,
+            id: 8,
             img: require('../assets/images/sites/porto-free-template.png'),
             title: 'Portfolio',
             link: 'https://colorlib.com/preview/theme/porto/'
           },
           {
-            id: 1,
+            id: 9,
             img: require('../assets/images/sites/endgam-free-template.png'),
             title: 'Gaming',
             link: 'https://colorlib.com/preview/theme/endgam/'
           },
           {
-            id: 2,
+            id: 10,
             img: require('../assets/images/sites/namaste-free-template.png'),
             title: 'Gym',
             link: 'https://colorlib.com/preview/theme/namaste/'
           }
-        ],
-      ]
+        ]
+      ],
+      heightCache: {}
     }
   },
   methods: {
-    randomHeight (min, max) {
-      let newHeight = Math.floor(Math.random() * (max - min)) + min
-      return newHeight
+    randomHeight (min, max, id) {
+      let newHeight = Math.floor(Math.random() * (max - min)) + min;
+      return this.heightCache[id] || (this.heightCache[id] = newHeight)
+    },
+    randomColor () {
+      const r = () => Math.floor(256 * Math.random())
+      return `rgb(${r()}, ${r()}, ${r()}) !important`
+    },
+    openLink (link) {
+      window.open(link, "_blank")
     }
   },
 }
@@ -142,6 +146,9 @@ export default {
   width 100vw
 .siteCards
   background-color #212121 !important
+.siteImages
+  transition 0.5s
+  cursor pointer
 .siteImages>.v-image__image
   background-position top !important
 </style>

@@ -1,112 +1,106 @@
 <template>
-  <v-layout row wrap class="siteCardLayout pt-4">
-    <v-flex xs4 v-for="col in columns" :key="col.id">
+  <v-layout row wrap class="siteCardLayout">
+    <v-flex xs12 sm6 md4 px-3 v-for="col in columns" :key="col.id">
         <v-card
           class="mb-3"
-          :style="{backgroundColor: randomColor(columns.id)}"
+          :style="{backgroundColor: randomColor(col.id)}"
         >
           <v-hover>
             <v-img
-              slot-scope="{ hover }"
-              :class="`elevation-${hover ? 20 : 2}`"
-              :src="col.img"
               height="350px"
-              class="siteImages"
+              slot-scope="{ hover }"
+              :src="col.img"
+              :style="`opacity: ${hover ? 0.4 : 1}`"
+              class="siteImages elevation-10"
+              @click.stop="col.dialog = true"
             ></v-img>
           </v-hover>
-          <v-layout text-xs-center align-center justify-center row wrap>
-            <v-flex class="xs12 sm6 md8">
-              <div class="py-3">
-                <span class="display-1 black--text">test</span><br>
-                <span class="black--text">test</span>
+          <v-container
+            fill-height
+            fluid
+            pa-2
+          >
+            <v-layout text-xs-center fill-height row>
+              <v-flex flexbox>
+                <div class="title pa-2">
+                {{ col.title }}
               </div>
-              <span class="black--text mx-3">test</span><br>
-              <v-layout justify-center align-center>
-                <v-card-actions>
-                  <!-- <v-btn @click.stop="card.dialog = true">
-                    {{ $t('more') }}
-                  </v-btn> -->
-                </v-card-actions>
-              </v-layout>
             </v-flex>
           </v-layout>
-        </v-card>
+        </v-container>
+      </v-card>
     </v-flex>
+    <DialogComp :dialogItems="columns" :fullscreen="false"/>
   </v-layout>
 </template>
 
 <script>
+import DialogComp from '@/components/DialogComp'
+
 export default {
-  name: 'SiteCardComp',
+  name: 'ImageGridComp',
+  components: {
+    DialogComp
+  },
   data () {
     return {
       height: 0,
       columns: [
         {
           id: 0,
+          dialog: false,
           img: require('../assets/images/sites/seo-free-seo-website-template.png'),
           title: 'SEO Optimized',
-          link: 'https://colorlib.com/preview/theme/seo/'
+          link: 'https://colorlib.com/preview/theme/seo/',
+          dialogContent: {
+            dialogText1: 'games.packageman.dialogText1',
+            dialogText2: 'games.packageman.dialogText2',
+            img: require('../assets/images/pm-dialog.png'),
+            imgl: require('../assets/images/sites/seo-free-seo-website-template.png'),
+            link: 'https://doctororbit.itch.io/package-man/'
+          }
         },
         {
           id: 1,
+          dialog: false,
           img: require('../assets/images/sites/appru-free-template.png'),
           title: 'Landing Page',
-          link: 'https://colorlib.com/preview/theme/appru/'
+          link: 'https://colorlib.com/preview/theme/appru/',
+          dialogContent: {
+            dialogText1: 'games.packageman.dialogText1',
+            dialogText2: 'games.packageman.dialogText2',
+            img: require('../assets/images/pm-dialog.png'),
+            imgl: require('../assets/images/pm-dialog-lazy.png'),
+            link: 'https://doctororbit.itch.io/package-man/'
+          }
         },
         {
           id: 2,
+          dialog: false,
           img: require('../assets/images/sites/heaven-free-template.png'),
           title: 'Architecture',
-          link: 'https://colorlib.com/preview/theme/heaven/'
+          link: 'https://colorlib.com/preview/theme/heaven/',
+          dialogContent: {
+            dialogText1: 'games.packageman.dialogText1',
+            dialogText2: 'games.packageman.dialogText2',
+            img: require('../assets/images/pm-dialog.png'),
+            imgl: require('../assets/images/pm-dialog-lazy.png'),
+            link: 'https://doctororbit.itch.io/package-man/'
+          }
         },
         {
           id: 3,
+          dialog: false,
           img: require('../assets/images/sites/supreme-free-template-1.png'),
           title: 'Business',
-          link: 'https://colorlib.com/preview/theme/supreme/'
-        },
-        {
-          id: 4,
-          img: require('../assets/images/sites/daren-free-template.png'),
-          title: 'Blog',
-          link: 'https://colorlib.com/preview/theme/daren/'
-        },
-        {
-          id: 5,
-          img: require('../assets/images/sites/bee-free-template.png'),
-          title: 'Business',
-          link: 'https://colorlib.com/preview/theme/bee/'
-        },
-        {
-          id: 6,
-          img: require('../assets/images/sites/minishop-free-template.png'),
-          title: 'e-Shop',
-          link: 'https://colorlib.com/preview/theme/minishop/'
-        },
-        {
-          id: 7,
-          img: require('../assets/images/sites/andrea-free-template.png'),
-          title: 'Blog',
-          link: 'https://colorlib.com/preview/theme/andrea/'
-        },
-        {
-          id: 8,
-          img: require('../assets/images/sites/porto-free-template.png'),
-          title: 'Portfolio',
-          link: 'https://colorlib.com/preview/theme/porto/'
-        },
-        {
-          id: 9,
-          img: require('../assets/images/sites/endgam-free-template.png'),
-          title: 'Gaming',
-          link: 'https://colorlib.com/preview/theme/endgam/'
-        },
-        {
-          id: 10,
-          img: require('../assets/images/sites/namaste-free-template.png'),
-          title: 'Gym',
-          link: 'https://colorlib.com/preview/theme/namaste/'
+          link: 'https://colorlib.com/preview/theme/supreme/',
+          dialogContent: {
+            dialogText1: 'games.packageman.dialogText1',
+            dialogText2: 'games.packageman.dialogText2',
+            img: require('../assets/images/pm-dialog.png'),
+            imgl: require('../assets/images/pm-dialog-lazy.png'),
+            link: 'https://doctororbit.itch.io/package-man/'
+          }
         }
       ],
       colorCache: {}
@@ -115,8 +109,7 @@ export default {
   methods: {
     randomColor (id) {
       const r = () => Math.floor(256 * Math.random());
-
-      return this.colorCache[id] || (this.colorCache[id] = `rgb(${r()}, ${r()}, ${r()})`);
+      return this.colorCache[id] || (this.colorCache[id] = `rgb(${r()}, ${r()}, ${r()}) !important`);
     }
   }
 }
@@ -124,6 +117,9 @@ export default {
 <style lang="stylus">
 .siteCardLayout
   width 100vw
+.siteImages
+  transition 0.5s
+  cursor pointer
 .siteImages>.v-image__image
   background-position top !important
 </style>

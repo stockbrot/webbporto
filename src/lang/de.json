@@ -4,7 +4,7 @@
   "more": "Weiter Lesen",
   "visit": "Website besuchen",
   "close": "Schließen",
-  "footer": "Verbinde dich mit uns auf unseren Sozialen Netzwerken!",
+  "footer": "Finde mich auf Social Networks!",
   "contactText": "Schreibe mir eine kurze E-Mail oder finde mich auf den gängigen Social Media Seiten.",
   "websiteText": "Diese Platzhalter wurden von <a href=\"https://colorlib.com/\">Colorlib©</a> bereitgestellt.",
   "404": "This page does not exist, go back to home <v-btn color=\"info\" class=\"d-flex\" width=\"150\" :to=\"$i18nRoute({name: 'home'})\">{{ $t('contactMe') }}</v-btn>",
