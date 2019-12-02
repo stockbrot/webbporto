@@ -17,6 +17,7 @@
                   :style="`opacity: ${hover ? 0.4 : 1}`"
                   class="siteImages elevation-20"
                   @click="openLink(col.link)"
+                  position="top"
                 ></v-img>
               </v-hover>
               <v-container
@@ -150,5 +151,5 @@ export default {
   transition 0.5s
   cursor pointer
 .siteImages>.v-image__image
-  background-position top !important
+  // background-position top !important
 </style>
