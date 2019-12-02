@@ -13,6 +13,7 @@
               :style="`opacity: ${hover ? 0.4 : 1}`"
               class="siteImages elevation-10"
               @click.stop="col.dialog = true"
+              position="top center"
             ></v-img>
           </v-hover>
           <v-container
@@ -49,13 +50,14 @@ export default {
         {
           id: 0,
           dialog: false,
-          img: require('../assets/images/sites/seo-free-seo-website-template.png'),
+          img: 'https://cdnb.artstation.com/p/assets/images/images/022/100/895/large/tanis-webb-pre-render013-edited2.jpg?1574114343',
+          // img: require('../assets/images/sites/seo-free-seo-website-template.png'),
           title: 'SEO Optimized',
           link: 'https://colorlib.com/preview/theme/seo/',
           dialogContent: {
             dialogText1: 'games.packageman.dialogText1',
             dialogText2: 'games.packageman.dialogText2',
-            img: require('../assets/images/pm-dialog.png'),
+            img: 'https://cdnb.artstation.com/p/assets/images/images/022/100/895/large/tanis-webb-pre-render013-edited2.jpg?1574114343',
             imgl: require('../assets/images/sites/seo-free-seo-website-template.png'),
             link: 'https://doctororbit.itch.io/package-man/'
           }
@@ -63,13 +65,13 @@ export default {
         {
           id: 1,
           dialog: false,
-          img: require('../assets/images/sites/appru-free-template.png'),
+          img: 'https://cdnb.artstation.com/p/assets/images/images/022/345/089/large/tanis-webb-overpaint.jpg?1575071367',
           title: 'Landing Page',
           link: 'https://colorlib.com/preview/theme/appru/',
           dialogContent: {
             dialogText1: 'games.packageman.dialogText1',
             dialogText2: 'games.packageman.dialogText2',
-            img: require('../assets/images/pm-dialog.png'),
+            img: 'https://cdnb.artstation.com/p/assets/images/images/022/345/089/large/tanis-webb-overpaint.jpg?1575071367',
             imgl: require('../assets/images/pm-dialog-lazy.png'),
             link: 'https://doctororbit.itch.io/package-man/'
           }
@@ -121,5 +123,5 @@ export default {
   transition 0.5s
   cursor pointer
 .siteImages>.v-image__image
-  background-position top !important
+  // background-position top !important
 </style>
