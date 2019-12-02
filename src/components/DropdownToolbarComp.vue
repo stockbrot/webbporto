@@ -74,7 +74,7 @@ export default {
 
 .icon--sites
   transition 0.2s
-  color #00c2f7 !important
+  color #3fb27f !important
 
 .icon--games
   transition 0.2s
@@ -82,5 +82,5 @@ export default {
 
 .icon--design
   transition 0.2s
-  color #3fb27f !important
+  color #00c2f7 !important
 </style>
