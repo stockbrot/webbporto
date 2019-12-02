@@ -12,7 +12,6 @@
             :titel="$t('paragraph.titel')"
             :textBlock="$t('paragraph.textBlock')"
             :img="require('../assets/images/moi.png')"
-            :imgl="require('../assets/images/moi-lazy.png')"
             :isLeft="true"
           />
         </v-container>
