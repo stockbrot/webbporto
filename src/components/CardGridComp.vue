@@ -8,7 +8,11 @@
         class="xs12 sm6 md4"
       >
         <v-hover>
-          <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 20 : 2}`">
+          <v-card
+            slot-scope="{ hover }"
+            :class="`elevation-${hover ? 20 : 2}`"
+            :to="$i18nRoute({ name: card.link })"
+          >
               <v-container
                 fill-height
                 fluid
@@ -85,6 +89,7 @@
   width 100%
   margin-right 0px
   margin-left 0px
+  cursor pointer
 .all-cards
   border-radius 10px
   border-width 5px
