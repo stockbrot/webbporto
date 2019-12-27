@@ -5,8 +5,8 @@
         <v-layout row wrap>
           <v-flex xs12 sm6>
             <v-flex xs12 class="pb-3" v-for="con in contacts" :key="con.id">
-              <v-icon class="mr-3">{{ con.icon }}</v-icon>
-              <span><a :href="con.conLink" target="_blank" class="conLink">{{ con.conInfo }}</a></span>
+              <v-icon>{{ con.icon }}</v-icon>
+              <span class="ml-3"><a :href="con.conLink" target="_blank" class="conLink">{{ con.conInfo }}</a></span>
             </v-flex>
           </v-flex>
           <v-flex xs12 sm6 class="pl-4">
@@ -32,8 +32,8 @@ export default {
       },
       {
         icon: 'fab fa-instagram',
-        conInfo: '@doctororbitdev',
-        conLink: 'https://www.instagram.com/doctororbitdev/',
+        conInfo: '@doctororbit.dev',
+        conLink: 'https://www.instagram.com/doctororbit.dev/',
         id: '1'
       },
       {
