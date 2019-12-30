@@ -16,11 +16,12 @@
                 <div class="py-3">
                   <h2 class="pb-3 text-xs-center">{{ post.title }}</h2>
                 <div class="px-4 text-xs-left">{{ $t(post.dialogContent.dialogText1) }}</div><br/>
+                <div v-if="post.dialogContent.html" v-html="post.dialogContent.html"></div>
                 </div>
               </v-flex>
               <v-flex class="xs12 sm6 md4">
                 <v-img
-                  :src="post.dialogContent.img"
+                  :src="post.dialogContent.img1"
                   :lazy-src="lazy_img"
                   class="mx-a"
                 ></v-img>
@@ -31,7 +32,7 @@
             <v-layout align-center justify-center row wrap>
               <v-flex class="xs12 sm6 md4">
                 <v-img
-                  :src="post.dialogContent.img"
+                  :src="post.dialogContent.img2"
                   :lazy-src="lazy_img"
                   class="mx-a"
                 ></v-img>
@@ -39,7 +40,7 @@
               <v-flex class="xs12 sm6 md8">
                 <div class="py-3">
                   <h2 class="pb-3 text-xs-center">{{ post.title }}</h2>
-                <div class="px-4 text-xs-right">{{ $t(post.dialogContent.dialogText1) }}</div><br/>
+                <div class="px-4 text-xs-right">{{ $t(post.dialogContent.dialogText2) }}</div><br/>
                 </div>
               </v-flex>
             </v-layout>
