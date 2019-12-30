@@ -52,8 +52,7 @@ export default {
           dialog: false,
           img: 'https://cdnb.artstation.com/p/assets/images/images/022/100/895/large/tanis-webb-pre-render013-edited2.jpg?1574114343',
           // img: require('../assets/images/sites/seo-free-seo-website-template.png'),
-          title: 'SEO Optimized',
-          link: 'https://colorlib.com/preview/theme/seo/',
+          title: 'Darth Vader\'s Saber',
           dialogContent: {
             dialogText1: 'games.packageman.dialogText1',
             dialogText2: 'games.packageman.dialogText2',
@@ -66,40 +65,11 @@ export default {
           id: 1,
           dialog: false,
           img: 'https://cdnb.artstation.com/p/assets/images/images/022/345/089/large/tanis-webb-overpaint.jpg?1575071367',
-          title: 'Landing Page',
-          link: 'https://colorlib.com/preview/theme/appru/',
+          title: 'The Mandalorian',
           dialogContent: {
             dialogText1: 'games.packageman.dialogText1',
             dialogText2: 'games.packageman.dialogText2',
             img: 'https://cdnb.artstation.com/p/assets/images/images/022/345/089/large/tanis-webb-overpaint.jpg?1575071367',
-            imgl: require('../assets/images/pm-dialog-lazy.png'),
-            link: 'https://doctororbit.itch.io/package-man/'
-          }
-        },
-        {
-          id: 2,
-          dialog: false,
-          img: require('../assets/images/sites/heaven-free-template.png'),
-          title: 'Architecture',
-          link: 'https://colorlib.com/preview/theme/heaven/',
-          dialogContent: {
-            dialogText1: 'games.packageman.dialogText1',
-            dialogText2: 'games.packageman.dialogText2',
-            img: require('../assets/images/pm-dialog.png'),
-            imgl: require('../assets/images/pm-dialog-lazy.png'),
-            link: 'https://doctororbit.itch.io/package-man/'
-          }
-        },
-        {
-          id: 3,
-          dialog: false,
-          img: require('../assets/images/sites/supreme-free-template-1.png'),
-          title: 'Business',
-          link: 'https://colorlib.com/preview/theme/supreme/',
-          dialogContent: {
-            dialogText1: 'games.packageman.dialogText1',
-            dialogText2: 'games.packageman.dialogText2',
-            img: require('../assets/images/pm-dialog.png'),
             imgl: require('../assets/images/pm-dialog-lazy.png'),
             link: 'https://doctororbit.itch.io/package-man/'
           }
