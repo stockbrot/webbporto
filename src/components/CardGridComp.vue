@@ -12,6 +12,7 @@
             slot-scope="{ hover }"
             :class="`elevation-${hover ? 20 : 2}`"
             :to="$i18nRoute({ name: card.link })"
+            ripple
           >
               <v-container
                 fill-height
