@@ -42,8 +42,8 @@ export default {
         title: 'Portfolio',
         items: [
           { text: 'design', icon: 'fas fa-cube', id: 2 },
-          { text: 'games', icon: 'fas fa-code-branch', id: 1 },
-          { text: 'sites', icon: 'fab fa-vuejs', id: 0 }
+          { text: 'games', icon: 'fas fa-code-branch', id: 1 }
+          // { text: 'sites', icon: 'fab fa-vuejs', id: 0 }
         ]
       }
     }
