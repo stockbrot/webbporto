@@ -43,7 +43,7 @@ export default {
 .parallaxComp {
 
   /*Uncomment this for distribution*/
-  background-image: url('../assets/images/parallax.png');
+  background-image: url('../assets/images/parallax2.png');
   /*background-image: url('../assets/images/parallax2.jpg');*/
 
   height: 100vh;
