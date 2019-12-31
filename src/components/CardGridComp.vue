@@ -5,7 +5,7 @@
       <v-flex
         v-for="card in cards"
         :key="card.id"
-        class="xs12 sm6 md4"
+        class="xs12 sm6 md6"
       >
         <v-hover>
           <v-card
@@ -61,15 +61,15 @@
             flex: 4,
             id: 0
           },
-          { title: 'Websites',
-            subtitle: 'Vue.js - Vuetify - Bootstrap - HTML - Stylus - CSS - Javascript',
-            text: 'vue',
-            link: 'sites',
-            icon: 'fab fa-vuejs',
-            flex: 4,
-            id: 1
-          },
-          { title: 'Gamedesign',
+          // { title: 'Websites',
+          //   subtitle: 'Vue.js - Vuetify - Bootstrap - HTML - Stylus - CSS - Javascript',
+          //   text: 'vue',
+          //   link: 'sites',
+          //   icon: 'fab fa-vuejs',
+          //   flex: 4,
+          //   id: 1
+          // },
+          { title: 'Games',
             subtitle: 'Unreal Engine',
             text: 'unreal',
             link: 'games',
