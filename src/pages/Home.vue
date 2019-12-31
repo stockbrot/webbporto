@@ -5,8 +5,8 @@
   >
     <v-layout justify-center>
       <v-flex>
-        <CarouselComp :items="items"/>
-        <!-- <ParallaxComp :para="false" img="/img/parallax.3a69e510.png"/> -->
+        <!-- <CarouselComp :items="items"/> -->
+        <ParallaxComp :para="false" img="/img/parallax2.540f8d19.png"/>
         <v-container fluid grid-list-md>
           <ParagraphComp
             :titel="$t('paragraph.titel')"
@@ -28,14 +28,14 @@
 import CardGridComp from '../components/CardGridComp'
 import ParagraphComp from '../components/ParagraphComp'
 import ParallaxComp from '../components/ParallaxComp'
-import CarouselComp from '../components/CarouselComp'
+// import CarouselComp from '../components/CarouselComp'
 
 export default {
   components: {
     CardGridComp,
     ParagraphComp,
-    ParallaxComp,
-    CarouselComp
+    ParallaxComp
+    // CarouselComp
   },
   name: 'Home',
   data () {
@@ -44,9 +44,9 @@ export default {
         { img: require('../assets/images/banner2.png'),
           header: 'Game Development',
           link: 'games' },
-        { img: require('../assets/images/banner1.png'),
-          header: 'Web Design',
-          link: 'sites' },
+        // { img: require('../assets/images/banner1.png'),
+        //   header: 'Web Design',
+        //   link: 'sites' },
         { img: require('../assets/images/banner3.png'),
           header: 'Art Design',
           link: 'design' },
