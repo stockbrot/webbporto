@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template>
   <v-layout
     column
@@ -33,7 +32,7 @@ export default {
   padding-left 50px
   padding-right 50px
 </style>
-=======
+
 <template>
   <v-layout
     column
@@ -68,4 +67,3 @@ export default {
   padding-left 50px
   padding-right 50px
 </style>
->>>>>>> 8f2cbf207839fbde1e14951d9fba128c6fd1a34e

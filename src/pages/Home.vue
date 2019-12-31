@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template>
   <v-layout
     column
@@ -56,7 +55,7 @@ export default {
   }
 }
 </script>
-=======
+
 <template>
   <v-layout
     column
@@ -114,4 +113,3 @@ export default {
   }
 }
 </script>
->>>>>>> 8f2cbf207839fbde1e14951d9fba128c6fd1a34e
