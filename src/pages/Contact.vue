@@ -2,7 +2,7 @@
   <v-layout
     row
     wrap
-    class="sitePadding pt-5 my-5"
+    class="sitePadding my-5"
     align-center
   >
     <v-flex xs12>

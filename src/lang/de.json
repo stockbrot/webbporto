@@ -10,7 +10,8 @@
   "404": "This page does not exist, go back to home <v-btn color=\"info\" class=\"d-flex\" width=\"150\" :to=\"$i18nRoute({name: 'home'})\">{{ $t('contactMe') }}</v-btn>",
   "pages": {
     "home": "Home",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "about": "Über"
   },
   "portfolio": {
     "sites": "Webseiten",
@@ -42,5 +43,11 @@
   "paragraph2": {
     "titel": "Dienstleistungen",
     "textBlock": "Ich bin ein Web Designer, Spieleentwickler und Künstler, mit Erfahrungen im Management von kleinen und großen Projekten. Mein Hintergrund in UI, UX und Design unterstützen mein durchdachten aber kompetetiven anlauf."
+  },
+  "about": {
+    "header": "Über Mich",
+    "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere.",
+    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere.",
+    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere."
   }
 }

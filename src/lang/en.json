@@ -10,7 +10,8 @@
   "404": "This page does not exist, go back to home",
   "pages": {
     "home": "Home",
-    "contact": "Contact"
+    "contact": "Contact",
+    "about": "About"
   },
   "portfolio": {
     "sites": "Websites",
@@ -42,5 +43,11 @@
   "paragraph2": {
     "titel": "My Services",
     "textBlock": "If you need a website for yourself or your company, an avatar for your social media site, or just general tips/advice for creating an online presence: Then I'm your guy!"
+  },
+  "about": {
+    "header": "About Me",
+    "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere.",
+    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere.",
+    "text3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus mattis molestie a iaculis at erat pellentesque. Cursus metus aliquam eleifend mi in nulla posuere."
   }
 }

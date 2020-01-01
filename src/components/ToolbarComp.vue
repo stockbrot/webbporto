@@ -85,6 +85,11 @@ export default {
           id: 0,
           title: 'contact',
           active: false
+        },
+        about: {
+          id: 1,
+          title: 'about',
+          active: false
         }
       }
     }
