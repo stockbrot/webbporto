@@ -1,8 +1,13 @@
 <template>
-  <v-layout row wrap class="siteCardLayout">
-    <v-flex xs12 sm6 md4 px-3 v-for="col in itemReverse" :key="col.id">
+  <v-layout pl-5 row wrap style="width: 100vw">
+    <v-flex
+      class="xs12 sm6 md4"
+      v-for="col in itemReverse"
+      :key="col.id"
+      pt-5
+      pr-5
+    >
         <v-card
-          class="mb-3"
           :style="{backgroundColor: randomColor(col.id)}"
         >
           <v-hover>
@@ -75,6 +80,19 @@ export default {
         },
         {
           id: 2,
+          dialog: false,
+          img: 'https://i.ytimg.com/vi/jHpvWiFybR8/sddefault.jpg',
+          title: 'Default Cube',
+          img_pos: 'center center',
+          dialogContent: {
+            html: '<iframe width="560" height="315" src="https://www.youtube.com/embed/jHpvWiFybR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            dialogText2: 'games.packageman.dialogText2',
+            img1: 'https://cdnb.artstation.com/p/assets/images/images/022/345/089/large/tanis-webb-overpaint.jpg?1575071367',
+            link: 'https://doctororbit.itch.io/package-man/'
+          }
+        },
+        {
+          id: 3,
           dialog: false,
           img: 'https://i.ytimg.com/vi/jHpvWiFybR8/sddefault.jpg',
           title: 'Default Cube',

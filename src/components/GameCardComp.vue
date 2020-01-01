@@ -1,50 +1,49 @@
 <template>
-  <!-- <v-container fluid class="siteCardLayout"> -->
-    <v-layout row wrap>
-      <v-flex
-        v-for="card in cards"
-        :key="card.id"
-        class="xs12 gameCard"
-        mb-4
-      >
-        <v-hover>
-          <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 20 : 2}`">
-            <v-container
-              fluid
-              :class="`cardcomp-` + card.text"
-            >
-              <v-layout text-xs-center align-center justify-center row wrap>
-                <v-flex class="xs12 sm6 md8">
-                  <div class="py-3">
-                    <span class="display-1 black--text">{{ card.title }}</span><br>
-                    <span class="black--text">{{ card.subtitle }}</span>
-                  </div>
-                  <span class="black--text mx-3">{{ $t('games.' + card.text + '.cardText') }}</span><br>
-                  <v-layout justify-center align-center>
-                    <v-card-actions>
-                      <v-btn @click.stop="card.dialog = true">
-                        {{ $t('more') }}
-                      </v-btn>
-                    </v-card-actions>
-                  </v-layout>
-                </v-flex>
-                <v-flex class="xs12 sm6 md4">
-                  <v-img
-                    :src="card.dialogContent.img"
-                    :lazy-src="card.dialogContent.imgl"
-                    class="mx-a"
-                  ></v-img>
-                    <!-- height="300px" -->
-                </v-flex>
-              </v-layout>
-            </v-container>
+  <v-layout row wrap>
+    <v-flex
+      v-for="card in cards"
+      :key="card.id"
+      class="xs12 gameCard"
+      pt-5
+      px-5
+    >
+      <v-hover>
+        <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 20 : 2}`">
+          <v-container
+            fluid
+            :class="`cardcomp-` + card.text"
+          >
+            <v-layout text-xs-center align-center justify-center row wrap>
+              <v-flex class="xs12 sm6 md8">
+                <div class="py-3">
+                  <span class="display-1 black--text">{{ card.title }}</span><br>
+                  <span class="black--text">{{ card.subtitle }}</span>
+                </div>
+                <span class="black--text mx-3">{{ $t('games.' + card.text + '.cardText') }}</span><br>
+                <v-layout justify-center align-center>
+                  <v-card-actions>
+                    <v-btn @click.stop="card.dialog = true">
+                      {{ $t('more') }}
+                    </v-btn>
+                  </v-card-actions>
+                </v-layout>
+              </v-flex>
+              <v-flex class="xs12 sm6 md4">
+                <v-img
+                  :src="card.dialogContent.img"
+                  :lazy-src="card.dialogContent.imgl"
+                  class="mx-a"
+                ></v-img>
+                  <!-- height="300px" -->
+              </v-flex>
+            </v-layout>
+          </v-container>
 
-          </v-card>
-        </v-hover>
-      </v-flex>
-      <DialogComp :dialogItems="cards" :fullscreen="false"/>
-    </v-layout>
-  <!-- </v-container> -->
+        </v-card>
+      </v-hover>
+    </v-flex>
+    <DialogComp :dialogItems="cards" :fullscreen="false"/>
+  </v-layout>
 </template>
 
 <script>
