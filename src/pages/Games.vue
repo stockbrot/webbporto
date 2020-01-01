@@ -2,7 +2,7 @@
   <v-layout
     column
     wrap
-    class="sitePage"
+    class="sitePadding my-5"
     align-center
   >
     <v-flex d-flex>
