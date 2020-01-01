@@ -15,6 +15,7 @@ export default [
       { path: '', name: 'home2', component: load('Home') },
       { path: 'home', name: 'home', component: load('Home') },
       { path: 'contact', name: 'contact', component: load('Contact') },
+      { path: 'about', name: 'about', component: load('About') },
       { path: 'games', name: 'games', component: load('Games') },
       { path: 'sites', name: 'sites', component: load('Sites') },
       { path: 'design', name: 'design', component: load('Design') },
