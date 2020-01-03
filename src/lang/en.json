@@ -25,6 +25,7 @@
   "games": {
     "packageman": {
       "dialogText1": "You have a limited time to fill your Van with packages, and your shift ends once the Van has reached the end of the Road. You have 5 days of work, from Monday - Friday. Each day is on a random map, at different times of day. Prove your capabilities by smashing as many doors, windows and garages as you can.",
+      "dialogText2": "You have a limited time to fill your Van with packages, and your shift ends once the Van has reached the end of the Road. You have 5 days of work, from Monday - Friday. Each day is on a random map, at different times of day. Prove your capabilities by smashing as many doors, windows and garages as you can.",
       "cardText": "Get packages. Throw packages. Get money. Done."
     },
     "sunday": {
@@ -37,11 +38,11 @@
     }
   },
   "paragraph": {
-    "titel": "About Me",
+    "title": "About Me",
     "textBlock": "I am a Web Designer, Game Developer and Artist, with experience in managing small and big projects. My background in User Interface, User Experience and Design support my mindful but competitive approach."
   },
   "paragraph2": {
-    "titel": "My Services",
+    "title": "My Services",
     "textBlock": "If you need a website for yourself or your company, an avatar for your social media site, or just general tips/advice for creating an online presence: Then I'm your guy!"
   },
   "about": {

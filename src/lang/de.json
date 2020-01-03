@@ -25,6 +25,7 @@
   "games": {
     "packageman": {
       "dialogText1": "Du hast limitierte Zeit deinen Van mit Paketen zu füllen, und deine Schicht endet sobald dein Van das Ende der Straße erreicht hat. Du arbeitest 5 Tage in der Woche, von Montag - Freitag. Jeder Tag ist auf einer anderen zufälligen map, zu unterschiedlichen Tageszeiten. Beweise deine Fähigkeiten in dem du so viele Türen, Fenster und Garagen wie möglich zerstörst.",
+      "dialogText2": "Du hast limitierte Zeit deinen Van mit Paketen zu füllen, und deine Schicht endet sobald dein Van das Ende der Straße erreicht hat. Du arbeitest 5 Tage in der Woche, von Montag - Freitag. Jeder Tag ist auf einer anderen zufälligen map, zu unterschiedlichen Tageszeiten. Beweise deine Fähigkeiten in dem du so viele Türen, Fenster und Garagen wie möglich zerstörst.",
       "cardText": "Pakete nehmen. Pakete werfen. Geld kriegen. Fertig."
     },
     "sunday": {
@@ -37,11 +38,11 @@
     }
   },
   "paragraph": {
-    "titel": "Über Mich",
+    "title": "Über Mich",
     "textBlock": "Ich bin ein Web Designer, Spieleentwickler und Künstler, mit Erfahrungen im Management von kleinen und großen Projekten. Mein Hintergrund in UI, UX und Design unterstützen mein durchdachten aber kompetetiven anlauf."
   },
   "paragraph2": {
-    "titel": "Dienstleistungen",
+    "title": "Dienstleistungen",
     "textBlock": "Ich bin ein Web Designer, Spieleentwickler und Künstler, mit Erfahrungen im Management von kleinen und großen Projekten. Mein Hintergrund in UI, UX und Design unterstützen mein durchdachten aber kompetetiven anlauf."
   },
   "about": {
