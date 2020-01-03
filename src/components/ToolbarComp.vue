@@ -3,13 +3,13 @@
     <v-toolbar fixed dense @scroll="handleScroll">
       <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = true"></v-toolbar-side-icon>
       <v-toolbar-title>
-        <v-btn class="display-1 ma-2 white--text title" :to="$i18nRoute({ path: '/' })">{{siteTitle}}</v-btn>
+        <v-btn depressed class="headline ma-1 white--text toolbar_title" :to="$i18nRoute({ path: '/' })">{{siteTitle}}</v-btn>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <DropdownButton attacher=".v-toolbar"/>
         <template v-for="item in nav">
-          <v-btn flat :key="item.id" class="title" :to="$i18nRoute({ path: item.title })" @click="drawer = false">{{ $t('pages.' + item.title) }}</v-btn>
+          <v-btn depressed :key="item.id" class="title rounded" :to="$i18nRoute({ path: item.title })" @click="drawer = false">{{ $t('pages.' + item.title) }}</v-btn>
         </template>
         <FabComp class="align-center justify-center d-flex"/>
       </v-toolbar-items>
