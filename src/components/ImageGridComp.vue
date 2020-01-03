@@ -14,9 +14,9 @@
             <v-img
               height="350px"
               slot-scope="{ hover }"
-              :src="col.img"
               :style="`opacity: ${hover ? 0.4 : 1}`"
-              class="siteImages elevation-10"
+              :src="col.img"
+              class="siteImages"
               @click.stop="col.dialog = true"
               :position="col.img_pos"
             ></v-img>
