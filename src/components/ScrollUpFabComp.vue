@@ -41,8 +41,8 @@ export default {
 
 <style lang="stylus">
 .fab-hidden
-  // opacity 0 !important
-  display none !important
+  opacity 0 !important
+  // display none !important
   transition 0.5s
 .scrollup-fab
   opacity 1
