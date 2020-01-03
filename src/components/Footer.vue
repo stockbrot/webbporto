@@ -8,18 +8,28 @@
       tile
     >
       <v-card-title>
-        <strong class="dg-text subheading font-weight-light">{{ $t('footer') }}</strong>
-        <v-spacer></v-spacer>
+        <v-layout row wrap>
+          <v-layout column>
+            <v-flex xs12>
+              <strong class="dg-text subheading font-weight-light">{{ $t('footer') }}</strong>
+            </v-flex>
+          </v-layout>
+          <v-spacer></v-spacer>
 
-        <v-btn
-          v-for="item in social"
-          :key="item.id"
-          class="mx-3"
-          :href="item.link"
-          icon
-        >
-          <v-icon class="dg-text dg-icon footer-icon" size="24px">{{ item.icon }}</v-icon>
-        </v-btn>
+          <v-layout column xs12>
+            <v-flex xs12>
+              <v-btn
+                v-for="item in social"
+                :key="item.id"
+                class="mx-3"
+                :href="item.link"
+                icon
+              >
+                <v-icon class="dg-text dg-icon footer-icon" size="24px">{{ item.icon }}</v-icon>
+              </v-btn>
+            </v-flex>
+          </v-layout>
+        </v-layout>
       </v-card-title>
 
       <v-card-actions class="justify-center footer-year">
