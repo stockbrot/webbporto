@@ -1,5 +1,5 @@
 <template>
-  <v-menu open-on-hover bottom offset-y>
+  <v-menu bottom offset-y>
     <v-btn
       slot="activator"
       class="dd-toolbar port-switch text-uppercase"
