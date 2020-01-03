@@ -4,12 +4,14 @@
       <v-container fluid grid-list-md>
         <div v-if="para" class="content">
           <ParagraphComp
-            :titel="$t('paragraph2.titel')"
-            :textBlock="$t('paragraph2.textBlock')"
-            :isLeft="false"
             class="my-4"
-            :img="'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Fmental-illness-and-brain-disorder%2F281%2Fdepression-mental-illness-010-512.png&f=1'"
-            :button="true"
+            :title="para_title"
+            :textBlock="para_text"
+            :img="para_img"
+            :isLeft="para_isLeft"
+            :button="para_button"
+            :button_to="para_button_to"
+            :button_text="para_button_text"
           />
         </div>
       </v-container>
@@ -26,7 +28,15 @@ export default {
   },
   props: {
     img: String,
-    para: Boolean
+    this_style: String,
+    para: Boolean,
+    para_title: String,
+    para_text: String,
+    para_img: String,
+    para_isLeft: Boolean,
+    para_button: Boolean,
+    para_button_to: Object,
+    para_button_text: String
   },
   computed: {
     style () {
@@ -44,18 +54,26 @@ export default {
 .parallaxComp {
 
   /*Uncomment this for distribution*/
-  background-image: url('../assets/images/parallax2.png');
-  /*background-image: url('../assets/images/parallax2.jpg');*/
+  /*background-image: url('../assets/images/parallax2.png');*/
 
   height: 100vh;
+  min-width: 100vw;
 
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /*background-repeat: repeat-x;*/
+  background-size: contain;
+  background-position-y: 48px;
+  /*background-color: #f6f6d3;*/
 }
+@media (max-width: 800px){
+  .parallaxComp {
+    height: 90vh;
+  }
+}
+
 .overlay {
-  background: rgba(0,0,0,0.6) !important;
+  background: rgba(0,0,0,0.3) !important;
   height: 100vh;
 }
 </style>
