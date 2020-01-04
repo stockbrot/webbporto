@@ -47,6 +47,6 @@ export default {
 .scrollup-fab
   opacity 1
   transition 0.5s
-  top 75vh
+  top 85vh
   left 2vw
 </style>
