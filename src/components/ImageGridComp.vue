@@ -7,34 +7,35 @@
       pt-5
       pr-5
     >
-        <v-card
-          :style="{backgroundColor: randomColor(col.id)}"
-        >
-          <v-hover>
+        <v-hover>
+          <v-card
+            :style="{backgroundColor: randomColor(col.id)}"
+            slot-scope="{ hover }"
+            :class="`elevation-${hover ? 20 : 2}`"
+          >
             <v-img
               height="350px"
-              slot-scope="{ hover }"
-              :style="`opacity: ${hover ? 0.4 : 1}`"
+              :style="`opacity: ${hover ? 0.6 : 1}`"
               :src="col.img"
               class="siteImages"
               @click.stop="col.dialog = true"
               :position="col.img_pos"
             ></v-img>
-          </v-hover>
-          <v-container
-            fill-height
-            fluid
-            pa-2
-          >
-            <v-layout text-xs-center fill-height row>
-              <v-flex flexbox>
-                <div class="title pa-2">
-                {{ col.title }}
-              </div>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-card>
+            <v-container
+              fill-height
+              fluid
+              pa-2
+            >
+              <v-layout text-xs-center fill-height row>
+                <v-flex flexbox>
+                  <div class="title pa-2">
+                  {{ col.title }}
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-card>
+      </v-hover>
     </v-flex>
     <DialogComp :dialogItems="columns" :fullscreen="false"/>
   </v-layout>
