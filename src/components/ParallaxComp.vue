@@ -28,6 +28,7 @@ export default {
   },
   props: {
     img: String,
+    img2: String,
     this_style: String,
     para: Boolean,
     para_title: String,
@@ -40,7 +41,7 @@ export default {
   },
   computed: {
     style () {
-      return 'background-image: url(\'' + this.img + '\');'
+      return 'background-image: url(\'' + this.img + '\'), url(\'' + this.img2 + '\');'
     }
   },
   data () {
@@ -57,19 +58,14 @@ export default {
   /*background-image: url('../assets/images/parallax2.png');*/
 
   height: 100vh;
-  min-width: 100vw;
+  /*min-width: 100vw;*/
 
   background-attachment: fixed;
-  background-position: center;
+  background-position: center, center;
   /*background-repeat: repeat-x;*/
-  background-size: contain;
-  background-position-y: 48px;
+  background-size: contain, cover;
+  /*background-position-y: 48px;*/
   /*background-color: #f6f6d3;*/
-}
-@media (max-width: 800px){
-  .parallaxComp {
-    height: 90vh;
-  }
 }
 
 .overlay {
