@@ -11,7 +11,6 @@
       :src="item.img"
       lazy-src="https://picsum.photos/id/41/60/30"
     >
-      <!-- :src="item.img" -->
       <v-layout
         align-start
         justify-center
@@ -32,7 +31,6 @@
     </v-carousel-item>
   </v-carousel>
 </template>
-
 <script>
 export default {
   name: 'CarouselComp',
@@ -55,3 +53,4 @@ export default {
 .v-carousel
   margin-top -50px
 </style>
+
