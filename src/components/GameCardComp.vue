@@ -65,7 +65,7 @@ export default {
           dialogContent: {
             dialogText1: 'games.packageman.dialogText1',
             img: require('../assets/images/pm-dialog.png'),
-            imgl: require('../assets/images/pm-dialog-lazy.png'),
+            imgl: require('../assets/images/pm-dialog_low.png'),
             link: 'https://doctororbit.itch.io/package-man/'
           }
         },
@@ -77,7 +77,7 @@ export default {
           dialogContent: {
             dialogText1: 'games.sunday.dialogText1',
             img: require('../assets/images/sd-dialog.png'),
-            imgl: require('../assets/images/sd-dialog.png'),
+            imgl: require('../assets/images/sd-dialog_low.png'),
             link: 'https://doctororbit.itch.io/sunday/'
           }
         },
@@ -89,7 +89,7 @@ export default {
           dialogContent: {
             dialogText1: 'games.trapped.dialogText1',
             img: require('../assets/images/td-dialog.png'),
-            imgl: require('../assets/images/td-dialog.png'),
+            imgl: require('../assets/images/td-dialog_low.png'),
             link: 'https://gamejolt.com/games/sanity/304699'
           }
         }
