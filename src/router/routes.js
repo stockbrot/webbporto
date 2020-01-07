@@ -11,7 +11,6 @@ export default [
     path: '/:lang',
     component: () => import('../layouts/MainLayout.vue'),
     children: [
-      // Can be used as 404 or failsave to go Home (which I prefer)
       { path: '', name: 'home2', component: load('Home') },
       { path: 'home', name: 'home', component: load('Home') },
       { path: 'contact', name: 'contact', component: load('Contact') },
