@@ -6,15 +6,13 @@
       flat
     >
       {{ items.title }}
-      <v-icon class="ml-3">fas fa-chevron-down</v-icon>
+      <v-icon class="align-end">fas fa-chevron-down</v-icon>
     </v-btn>
     <v-list>
       <template v-for="item in items.items">
         <v-hover :key="item.id">
           <v-list-tile
             :to="$i18nRoute({ name: item.text })"
-            class="dd-no-shadow port-list"
-            :class="{'dd-shadow': items.active}"
             slot-scope="{ hover }"
           >
             <v-layout>
@@ -41,7 +39,7 @@ export default {
       items: {
         title: 'Portfolio',
         items: [
-          { text: 'design', icon: 'fas fa-cube', id: 2 },
+          { text: 'design', icon: 'fas fa-cube', id: 0 },
           { text: 'games', icon: 'fas fa-code-branch', id: 1 }
           // { text: 'sites', icon: 'fab fa-vuejs', id: 0 }
         ]
