@@ -33,7 +33,17 @@
                   :src="card.dialogContent.img"
                   :lazy-src="card.dialogContent.imgl"
                   class="mx-a"
-                ></v-img>
+                >
+                  <template v-slot:placeholder>
+                    <v-layout
+                      align-center
+                      justify-center
+                      class="fill-height"
+                    >
+                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                    </v-layout>
+                  </template>
+                </v-img>
                   <!-- height="300px" -->
               </v-flex>
             </v-layout>
