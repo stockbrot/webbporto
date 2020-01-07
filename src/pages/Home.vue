@@ -9,8 +9,10 @@
           :para="false"
           :img="require('../assets/images/parallax2.png')"
           :img2="require('../assets/images/parallax2_low.png')"
+          :scroll="true"
         />
         <ParallaxComp
+          id="first"
           :para="true"
           :para_title="$t('paragraph.title')"
           :para_text="$t('paragraph.textBlock')"
