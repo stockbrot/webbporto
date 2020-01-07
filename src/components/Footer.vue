@@ -8,15 +8,14 @@
       tile
     >
       <v-card-title>
-        <v-layout row wrap>
-          <v-layout column>
+        <v-layout row wrap justify-center align-center>
+          <v-layout column justify-center align-center>
             <v-flex xs12>
               <strong class="dg-text subheading font-weight-light">{{ $t('footer') }}</strong>
             </v-flex>
           </v-layout>
-          <v-spacer></v-spacer>
 
-          <v-layout column xs12>
+          <v-layout column justify-center align-center>
             <v-flex xs12>
               <v-btn
                 v-for="item in social"
