@@ -14,11 +14,11 @@ export default {
   name: 'App',
   components: {
     Footer,
-    ScrollUpFabComp,
+    ScrollUpFabComp
   }
 }
 
 </script>
 
-<style lang="stylus">
+<style>
 </style>
