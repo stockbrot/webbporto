@@ -6,7 +6,17 @@
         :lazy-src="imgl"
         max-height="300"
         contain
-      />
+      >
+        <template v-slot:placeholder>
+          <v-layout
+            align-center
+            justify-center
+            class="fill-height"
+          >
+            <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+          </v-layout>
+        </template>
+      </v-img>
       <!-- <v-spacer/> -->
     </v-flex>
     <v-flex xs12 sm6 md7>
@@ -22,13 +32,24 @@
         :lazy-src="imgl"
         max-height="300"
         contain
-      />
+      >
+        <template v-slot:placeholder>
+          <v-layout
+            align-center
+            justify-center
+            class="fill-height"
+          >
+            <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+          </v-layout>
+        </template>
+      </v-img>
       <!-- <v-spacer/> -->
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+
 export default {
   name: 'ParagraphComp',
   props: {
