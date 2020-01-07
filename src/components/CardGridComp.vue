@@ -1,11 +1,11 @@
 <template>
   <section class="ma-5">
     <div class="text-xs-center pa-5 display-1">{{ $t('skills.title') }}</div>
-    <v-layout class="cardcomp" row wrap>
+    <v-layout class="cardcomp" row wrap justify-center align-center>
       <v-flex
         v-for="card in cards"
         :key="card.id"
-        class="xs12 sm6 md6"
+        class="sm12 md5 lg4 xl3 fill-width"
       >
         <v-hover>
           <v-card
@@ -13,33 +13,23 @@
             :class="`elevation-${hover ? 20 : 2}`"
             :to="$i18nRoute({ name: card.link })"
             ripple
+            class="mx-3"
           >
-              <v-container
-                fill-height
-                fluid
-              >
-                <v-layout text-xs-center fill-height row>
-                  <v-flex flexbox py-5>
-                    <v-icon size="100" :class="`icon--${hover ? card.text : 1}`">{{ card.icon }}</v-icon>
-                    <div class="py-3">
-                      <span class="display-1">{{ card.title }}</span><br>
-                      <!-- <span class="caption">{{ card.subtitle }}</span> -->
-                    </div>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            <!-- </v-img> -->
-
-            <!-- <v-card-actions>
-              <v-layout align-center justify-center>
-                <v-flex flexbox text-xs-center>
-                  <v-spacer></v-spacer>
-                  <v-btn color="info" :to="$i18nRoute({ name: card.link })">
-                    {{ $t('skills.btn') }}
-                  </v-btn>
+            <!-- style="max-width: 426px" -->
+            <v-container
+              fill-height
+              fluid
+            >
+              <v-layout text-xs-center fill-height row>
+                <v-flex flexbox py-5>
+                  <v-icon size="100" :class="`icon--${hover ? card.text : 1}`">{{ card.icon }}</v-icon>
+                  <div class="py-3">
+                    <span class="display-1">{{ card.title }}</span><br>
+                    <span class="caption">{{ card.subtitle }}</span>
+                  </div>
                 </v-flex>
               </v-layout>
-            </v-card-actions> -->
+            </v-container>
           </v-card>
         </v-hover>
       </v-flex>
@@ -87,7 +77,7 @@
 .v-card
   background #212121 !important
 .cardcomp
-  width 100%
+  // width 100%
   margin-right 0px
   margin-left 0px
   cursor pointer
