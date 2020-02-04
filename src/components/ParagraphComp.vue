@@ -20,11 +20,15 @@
       <!-- <v-spacer/> -->
     </v-flex>
     <v-flex xs12 sm6 md7>
-      <v-card class="pa-4">
-        <h1 class="display-1 mb-3 text-xs-caption" :class="`text-xs-${isLeft ? 'left' : 'right'}`">{{ title }}</h1>
-        <p class="subheading" :class="`text-xs-${isLeft ? 'left' : 'right'}`">{{ textBlock }}</p>
-        <v-btn v-if="button" color="info" class="d-flex" width="150" :to="button_to">{{ button_text }}</v-btn>
-      </v-card>
+      <kinesis-container>
+        <kinesis-element :strength="5" type="depth">
+          <v-card class="pa-4">
+            <h1 class="display-1 mb-3 text-xs-caption" :class="`text-xs-${isLeft ? 'left' : 'right'}`">{{ title }}</h1>
+            <p class="subheading" :class="`text-xs-${isLeft ? 'left' : 'right'}`">{{ textBlock }}</p>
+            <v-btn v-if="button" color="info" class="d-flex" width="150" :to="button_to">{{ button_text }}</v-btn>
+          </v-card>
+        </kinesis-element>
+      </kinesis-container>
     </v-flex>
     <v-flex xs4 sm5 md3 v-if="!isLeft" class="weird">
       <v-img
