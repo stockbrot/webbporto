@@ -1,58 +1,73 @@
 <template>
-  <v-layout pl-5 row wrap style="width: 100vw">
-    <v-flex
-      class="xs12 sm12 md6 lg4"
-      v-for="col in itemReverse"
-      :key="col.id"
-      pt-5
-      pr-5
+  <v-layout pl-5 pr-5 column style="width: 100vw">
+    <v-tabs
+      fixed-tabs
+      grow
+      dark
+      color="#212121"
     >
-        <v-hover>
-          <v-card
-            :style="{backgroundColor: randomColor(col.id)}"
-            slot-scope="{ hover }"
-            :class="`elevation-${hover ? 20 : 2}`"
-          >
-              <!-- :style="`opacity: ${hover ? 0.6 : 1}`" -->
-            <!-- <div class="containers"> -->
-              <v-img
-                height="350px"
-                :src="col.img"
-                :lazy-src="col.dialogContent.imgl"
-                class="siteImages containers"
-                @click.stop="col.dialog = true"
-                :position="col.img_pos"
+      <v-tab v-on:click="filterSelection('all')">All</v-tab>
+      <v-tab v-on:click="filterSelection('blender')">3D Art</v-tab>
+      <v-tab v-on:click="filterSelection('blender')">3D Modeling</v-tab>
+      <v-tab v-on:click="filterSelection('krita')">Drawing</v-tab>
+    </v-tabs>
+    <v-layout row wrap pt-3>
+      <v-flex
+        v-for="col in itemReverse"
+        class="xs12 sm12 md6 lg4 filterDiv"
+        :class="{'show':(col.software.toLowerCase() === selectedCategory || selectedCategory === 'all')}"
+        :key="col.id"
+        pa-2
+      >
+            <v-hover>
+        <kinesis-container>
+          <kinesis-element :strength="10" type="depth_inv">
+              <v-card
+                :style="{backgroundColor: randomColor(col.id)}"
+                slot-scope="{ hover }"
+                :class="`elevation-${hover ? 20 : 2}`"
               >
-                <template v-slot:placeholder>
-                  <v-layout
-                    align-center
-                    justify-center
-                    class="fill-height"
-                  >
-                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                  </v-layout>
-                </template>
-                <div class="imageOverlay">
-                  <div class="text">{{ col.software }}</div>
-                </div>
-              </v-img>
-            <!-- </div> -->
-            <v-container
-              fill-height
-              fluid
-              pa-2
-            >
-              <v-layout text-xs-center fill-height row>
-                <v-flex flexbox>
-                  <div class="title pa-2">
-                  {{ col.title }}
-                </div>
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </v-card>
-      </v-hover>
-    </v-flex>
+                <v-img
+                  height="350px"
+                  :src="col.dialogContent.img"
+                  :lazy-src="col.dialogContent.imgl"
+                  class="siteImages containers"
+                  @click.stop="col.dialog = true"
+                  :position="col.img_pos"
+                >
+                  <template v-slot:placeholder>
+                    <v-layout
+                      align-center
+                      justify-center
+                      class="fill-height"
+                    >
+                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                    </v-layout>
+                  </template>
+                  <div class="imageOverlay">
+                    <div class="text">{{ col.title }}</div>
+                  </div>
+                </v-img>
+                <!-- </div> -->
+                <!-- <v-container
+                  fill-height
+                  fluid
+                  pa-2
+                >
+                  <v-layout text-xs-center fill-height row>
+                    <v-flex flexbox>
+                      <div class="title pa-2">
+                      {{ col.title }}
+                    </div>
+                  </v-flex>
+                </v-layout>
+              </v-container> -->
+              </v-card>
+          </kinesis-element>
+        </kinesis-container>
+            </v-hover>
+      </v-flex>
+    </v-layout>
     <DialogComp :dialogItems="content" :fullscreen="false"/>
   </v-layout>
 </template>
@@ -71,6 +86,7 @@ export default {
   data () {
     return {
       height: 0,
+      selectedCategory: 'all',
       colorCache: {}
     }
   },
@@ -78,6 +94,9 @@ export default {
     randomColor (id) {
       const r = () => Math.floor(200 * Math.random() - 50);
       return this.colorCache[id] || (this.colorCache[id] = `rgb(${r()}, ${r()}, ${r()}) !important`);
+    },
+    filterSelection (c) {
+      this.selectedCategory = c
     }
   },
   computed: {
@@ -89,7 +108,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" slot="scoped">
 .siteCardLayout
   width 100vw
 
@@ -120,4 +139,15 @@ export default {
   left 50%
   transform translate(-50%, -50%)
   -ms-transform translate(-50%, -50%)
+
+.filterDiv
+  display none
+  transition 1s
+
+.show
+  display block
+  transition 1s
+
+
+
 </style>
