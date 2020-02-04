@@ -7,50 +7,57 @@
       pt-5
       px-5
     >
-      <v-hover>
-        <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 20 : 2}`">
-          <v-container
-            fluid
-            :class="`cardcomp-` + card.text"
-          >
-            <v-layout text-xs-center align-center justify-center row wrap>
-              <v-flex class="xs12 sm6 md8">
-                <div class="py-3">
-                  <span class="display-1 black--text">{{ card.title }}</span><br>
-                  <span class="black--text">{{ card.subtitle }}</span>
-                </div>
-                <span class="black--text mx-3">{{ $t('games.' + card.text + '.cardText') }}</span><br>
-                <v-layout justify-center align-center>
-                  <v-card-actions>
-                    <v-btn @click.stop="card.dialog = true">
-                      {{ $t('more') }}
-                    </v-btn>
-                  </v-card-actions>
-                </v-layout>
-              </v-flex>
-              <v-flex class="xs12 sm6 md4">
-                <v-img
-                  :src="card.dialogContent.img"
-                  :lazy-src="card.dialogContent.imgl"
-                  class="mx-a"
-                >
-                  <template v-slot:placeholder>
-                    <v-layout
-                      align-center
-                      justify-center
-                      class="fill-height"
-                    >
-                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+      <kinesis-container>
+        <kinesis-element :strength="5" type="depth_inv">
+          <v-hover>
+            <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 20 : 2}`">
+              <v-container
+                fluid
+                :class="`cardcomp-` + card.text"
+              >
+                <v-layout text-xs-center align-center justify-center row wrap>
+                  <v-flex class="xs12 sm6 md8">
+                    <div class="py-3">
+                      <span class="display-1 black--text">{{ card.title }}</span><br>
+                      <span class="black--text">{{ card.subtitle }}</span>
+                    </div>
+                    <span class="black--text mx-3">{{ $t('games.' + card.text + '.cardText') }}</span><br>
+                    <v-layout justify-center align-center>
+                      <v-card-actions>
+                        <v-btn @click.stop="card.dialog = true">
+                          {{ $t('more') }}
+                        </v-btn>
+                      </v-card-actions>
                     </v-layout>
-                  </template>
-                </v-img>
-                  <!-- height="300px" -->
-              </v-flex>
-            </v-layout>
-          </v-container>
+                  </v-flex>
+                  <v-flex class="xs12 sm6 md4">
+                    <kinesis-element :strength="5" type="translate">
+                      <v-img
+                        :src="card.dialogContent.img"
+                        :lazy-src="card.dialogContent.imgl"
+                        class="mx-a"
+                        :class="`elevation-${hover ? 20 : 2}`"
+                      >
+                        <template v-slot:placeholder>
+                          <v-layout
+                            align-center
+                            justify-center
+                            class="fill-height"
+                          >
+                            <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                          </v-layout>
+                        </template>
+                      </v-img>
+                    </kinesis-element>
+                      <!-- height="300px" -->
+                  </v-flex>
+                </v-layout>
+              </v-container>
 
-        </v-card>
-      </v-hover>
+            </v-card>
+          </v-hover>
+        </kinesis-element>
+      </kinesis-container>
     </v-flex>
     <DialogComp :dialogItems="cards" :fullscreen="false"/>
   </v-layout>

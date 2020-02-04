@@ -7,31 +7,37 @@
         :key="card.id"
         class="sm12 md5 lg4 xl3 fill-width"
       >
-        <v-hover>
-          <v-card
-            slot-scope="{ hover }"
-            :class="`elevation-${hover ? 20 : 2}`"
-            :to="$i18nRoute({ name: card.link })"
-            ripple
-            class="mx-3"
-          >
-            <!-- style="max-width: 426px" -->
-            <v-container
-              fill-height
-              fluid
-            >
-              <v-layout text-xs-center fill-height row>
-                <v-flex flexbox py-5>
-                  <v-icon size="100" :class="`icon--${hover ? card.text : 1}`">{{ card.icon }}</v-icon>
-                  <div class="py-3">
-                    <span class="display-1">{{ card.title }}</span><br>
-                    <span class="caption">{{ card.subtitle }}</span>
-                  </div>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card>
-        </v-hover>
+        <kinesis-container>
+          <kinesis-element :strength="10" type="depth">
+            <v-hover>
+              <v-card
+                slot-scope="{ hover }"
+                :class="`elevation-${hover ? 20 : 2}`"
+                :to="$i18nRoute({ name: card.link })"
+                ripple
+                class="mx-3"
+              >
+                <!-- style="max-width: 426px" -->
+                <v-container
+                  fill-height
+                  fluid
+                >
+                  <v-layout text-xs-center fill-height row>
+                    <v-flex flexbox py-5>
+                      <kinesis-element :strength="10" type="translate">
+                        <v-icon size="100" :class="`icon--${hover ? card.text : 1}`">{{ card.icon }}</v-icon>
+                        <div class="py-3">
+                          <span class="display-1">{{ card.title }}</span><br>
+                          <span class="caption">{{ card.subtitle }}</span>
+                        </div>
+                      </kinesis-element>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card>
+            </v-hover>
+          </kinesis-element>
+        </kinesis-container>
       </v-flex>
     </v-layout>
   </section>
