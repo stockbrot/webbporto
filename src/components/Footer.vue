@@ -32,7 +32,7 @@
       </v-card-title>
 
       <v-card-actions class="justify-center footer-year">
-        &copy;2019 — <strong>Tanis Webb</strong>
+        &copy;2020 — <strong>Tanis Webb</strong>
       </v-card-actions>
     </v-card>
   </v-footer>
@@ -49,14 +49,14 @@ export default {
           link: 'https://doctororbit.itch.io/',
           icon: 'fab fa-itch-io'
         },
-        {
-          id: 1,
-          link: 'https://twitter.com/DoctorORBiT',
-          icon: 'fab fa-twitter'
-        },
+        // {
+        //   id: 1,
+        //   link: 'https://twitter.com/DoctorORBiT',
+        //   icon: 'fab fa-twitter'
+        // },
         {
           id: 2,
-          link: 'https://www.instagram.com/doctororbitdev/',
+          link: 'https://www.instagram.com/doctororbit.dev/',
           icon: 'fab fa-instagram'
         },
         {

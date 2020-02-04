@@ -1,6 +1,6 @@
 <template>
-  <v-layout row wrap>
-    <v-flex xs12>
+  <v-layout row wrap fill-height>
+    <v-flex xs12 fill-height d-flex style="max-height: 500px; height: 500px">
       <v-card class="pa-4">
         <v-layout row wrap>
           <v-flex xs12 sm6>

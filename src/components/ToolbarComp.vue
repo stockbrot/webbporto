@@ -81,14 +81,14 @@ export default {
     return {
       drawer: false,
       nav: {
-        contact: {
+        about: {
           id: 0,
-          title: 'contact',
+          title: 'about',
           active: false
         },
-        about: {
+        contact: {
           id: 1,
-          title: 'about',
+          title: 'contact',
           active: false
         }
       }

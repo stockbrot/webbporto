@@ -6,7 +6,7 @@
       flat
     >
       {{ items.title }}
-      <v-icon class="align-end">fas fa-chevron-down</v-icon>
+      <v-icon class="align-end pl-2">fas fa-chevron-down</v-icon>
     </v-btn>
     <v-list>
       <template v-for="item in items.items">

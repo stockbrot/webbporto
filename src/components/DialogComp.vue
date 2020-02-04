@@ -12,12 +12,7 @@
             pa-2
           >
             <v-layout align-center justify-center row wrap>
-              <v-flex class="xs12">
-                <div
-                  v-if="post.dialogContent.html"
-                  v-html="post.dialogContent.html">
-                </div>
-                  <!-- @click.stop="post.imageContent.dialog = true" -->
+              <v-flex xs12>
                 <v-btn
                   icon
                   dark
@@ -25,11 +20,19 @@
                 >
                   <v-icon>fas fa-times-circle</v-icon>
                 </v-btn>
+                <div
+                  v-if="post.dialogContent.html"
+                  v-html="post.dialogContent.html"
+                  style="max-height: 600px !important"
+                  class="d-flex mx-a"
+                >
+                </div>
+                  <!-- @click.stop="post.imageContent.dialog = true" -->
                 <v-img
                   @click="post.images.main1.dialog = !post.images.main1.dialog"
-                  :src="post.img"
-                  :lazy-src="post.imgl"
-                  class="mx-a"
+                  :src="post.dialogContent.img"
+                  :lazy-src="post.dialogContent.imgl"
+                  class="mx-a siteImages"
                   v-if="!post.dialogContent.html"
                   max-height="600px"
                   contain
@@ -58,9 +61,9 @@
               <v-flex class="xs12 sm6 md3">
                 <v-img
                   @click="post.images.main2.dialog = !post.images.main2.dialog"
-                  :src="post.img"
-                  :lazy-src="post.imgl"
-                  class="mx-a"
+                  :src="post.dialogContent.img"
+                  :lazy-src="post.dialogContent.imgl"
+                  class="mx-a siteImages"
                 >
                   <template v-slot:placeholder>
                     <v-layout
@@ -85,7 +88,7 @@
                 <v-btn color="error" @click.stop="post.dialog = false">
                   {{ $t('close') }}
                 </v-btn>
-                <v-btn color="info" :href="post.dialogContent.link">
+                <v-btn color="info" :href="post.dialogContent.link" v-if="post.dialogContent.link">
                   {{ $t('visit') }}
                 </v-btn>
               </v-card-actions>
@@ -99,23 +102,27 @@
           fullscreen
           :key="imgs.key"
         >
-          <v-img
-            fullscreen
-            transition="dialog-bottom-transition"
-            :src="imgs.img"
-            :lazy-src="imgs.imgl"
-            contain
-            width="100vw"
-            height="100vh"
-          >
-            <v-btn
-              icon
-              dark
+          <v-card class="dialog-background">
+            <v-img
+              fullscreen
+              transition="dialog-bottom-transition"
+              class="siteImages"
+              :src="imgs.img"
+              :lazy-src="imgs.imgl"
+              contain
+              width="100vw"
+              height="100vh"
               @click="imgs.dialog = false"
             >
-              <v-icon>fas fa-times-circle</v-icon>
-            </v-btn>
-          </v-img>
+              <v-btn
+                icon
+                dark
+                @click="imgs.dialog = false"
+              >
+                <v-icon>fas fa-times-circle</v-icon>
+              </v-btn>
+            </v-img>
+          </v-card>
         </v-dialog>
       </template>
     </div>
@@ -138,7 +145,9 @@ export default {
 </script>
 
 <style lang="stylus">
-.dButton:hover
-  transition 0.5s !important
-  background-color rgba(21,113,237,1) !important
+// .dButton:hover
+//   transition 0.5s !important
+//   background-color rgba(21,113,237,1) !important
+.dialog-background
+  border-radius 0
 </style>
