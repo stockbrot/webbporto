@@ -11,7 +11,7 @@
     "axios": "^0.18.0",
     "core-js": "2",
     "font-awesome": "^4.7.0",
-    "stylus": "^0.54.5",
+    "stylus": "^0.56.0",
     "stylus-loader": "^3.0.2",
     "typeface-montserrat": "^0.0.54",
     "typeface-righteous": "^0.0.72",
